@@ -137,14 +137,18 @@
 
     <div
         style="position:absolute;left:10%;padding:2%;margin-left:-121px;top:0px;width:312px;height:350px;border-style:groove;overflow:hidden;background-color: #bbbab5;top:10%;">
-        <div> Number of bills....<input id="count" type="text" value="1" /> </div> </br>
-        <div> Bill No....<input id="billNo" type="text" value="B6923" /> </div> </br>
-        <div> Local Id...<input id="localId" type="text" value="00016414" /> </div> </br>
-        <div> From Date........<input id="FromDateId" type="text" value="01/31/21" /> </div> </br>
-        <div> TO Date........<input id="ToDateId" type="text" value="02/28/21" /> </div> </br>
-        <div> Time.......<input id="timeId" type="text" value="12:21" /> </div> </br>
-        <div> Vol.........<input id="volId" type="text" value='00015.00' /> </div> </br>
-        <div> Rate........<input id="rateId" type="text" value='092.52' /> </div> </br>
+        <div> Number of bills: <input id="count" type="text" value="1" /> </div> </br>
+        <input id="billNo" type="text" value="B6923" hidden />
+        <input id="localId" type="text" value="00016414" hidden />
+        <div> From Date: <input id="FromDateId" type="date" onchange="filldate();" /> </div>
+        </br>
+        <div> TO Date: <input id="ToDateId" type="date" value="02/28/21" /> </div> </br>
+        <input id="timeId" type="text" value="12:21" hidden />
+        <!-- <div> Vol.........<input id="volId" type="text" value='15.00' /> </div> </br> -->
+        <div> Lower vol: <input id="lowerVolRangeId" type="text" value='30.21' /> </div> </br>
+        <div> Upper vol: <input id="upperVolRangeId" type="text" value='35.33' /> </div> </br>
+        <div> Lower Rate: <input id="lowerRateRangeId" type="text" value='107.52' /> </div> </br>
+        <div> Upper Rate: <input id="upperRateRangeId" type="text" value='120.83' /> </div> </br>
         <div> <input id="setBut" type="button" value='Set Values' onclick="myFunction()"
                 style='background:green;color:white' /> </div> </br>
 
@@ -154,7 +158,7 @@
         <div
             style="position:absolute;left:50%;margin-left:-121px;top:0px;width:312px;height:792px;border-style:groove;overflow:hidden;background-color: white;top:2%">
             <div style="position:absolute;left:4.56px;top:0.00px" class="cls_002"><span class="cls_002"></span></div>
-            <div style="position:absolute;left:84.76px;top:100.44px" class="cls_003"><img src="logo_w_2.png"
+            <div style="position:absolute;left:84.76px;top:100.44px" class="cls_003"><img id="logo" src="logo_w_2.png"
                     style="width: 150px;" /></div>
             <div style="position:absolute;left:60.80px;top:247.20px" class="cls_005"><span class="cls_005">Welcomes
                     You</span></div>
