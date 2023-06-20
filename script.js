@@ -55,7 +55,7 @@ function myFunction() {
         // window.alert("done");
         date = new Date(date);
         date.setDate(date.getDate() + diffDays);
-        date = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+        date = `${date.getFullYear()}-${pad(date.getMonth() + 1, 2)}-${pad(date.getDate(), 2)}`;
 
         var divContents = document.getElementById("dvContainer").innerHTML;
         var printWindow = window.open('', '', 'height=400,width=800');
@@ -67,9 +67,15 @@ function myFunction() {
         printWindow.print();
         console.log("Printing done for ==================");
     }
+
+
 }
 function filldate() {
     document.getElementById('FromDateId').value = document.getElementById('FromDateId').value.split('-').reverse().join("");
+}
+
+function redirect() {
+    window.open('./thankyou.html');
 }
 
 window.onload = function () {
